@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Laytime Calculator</h1>
+        <div class="content">
+            <div class="date-inputs">
+                <div class="date-group">
+                    <label for="norDate">NOR Accepted:</label>
+                    <input type="datetime-local" id="norDate" required>
+                </div>
+                <div class="date-group">
+                    <label for="completionDate">Load/discharge complete:</label>
+                    <input type="datetime-local" id="completionDate" required>
+                </div>
+                <div class="date-group">
+                    <label for="laytimeHours">Laytime (hours):</label>
+                    <input type="number" id="laytimeHours" min="1" max="1000" required>
+                </div>
+                <div class="date-group">
+                    <label>Deductions (hours):</label>
+                    <input type="number" id="deductionHours" value="0">
+                </div>
+            </div>
+            <button id="calculateButton" class="large-button">Calculate laytime</button>
+            <div id="output"></div>
+            <button id="sendToCostsButton" class="action-button">Send to costs and revenue</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> 
